@@ -79,7 +79,7 @@
         app:drawableTint="@color/white" />
 
     <TextView
-        android:id="@+id/txt_release_date"
+        android:id="@+id/release_movie_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
