@@ -16,7 +16,7 @@ class PopularMovieItemAdapter (
 ) : RecyclerView.Adapter<PopularMovieItemAdapter.PopularViewHolder>()  {
 
     interface OnMovieClickListener {
-        fun onMovieClick(movie: Movie)
+        fun onMovieClick(movieEntity: MovieEntity)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularViewHolder {
@@ -38,6 +38,7 @@ class PopularMovieItemAdapter (
                     .into(binding.posterMovieImage)
 
                 holder.itemView.setOnClickListener {
+                    itemClickListener.onMovieClick(this)
                 }
             }
         }

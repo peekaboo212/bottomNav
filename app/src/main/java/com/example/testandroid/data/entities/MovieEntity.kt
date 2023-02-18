@@ -1,9 +1,12 @@
 package com.example.testandroid.data.entities
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 @Entity(tableName = "movieEntity")
 data class MovieEntity (
     @PrimaryKey
@@ -34,4 +37,4 @@ data class MovieEntity (
     var voteCount: Int? = 0,
     @ColumnInfo(name = "movie_type")
     var movie_type: Int = 0
-)
+):Parcelable

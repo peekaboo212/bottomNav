@@ -17,5 +17,9 @@
         android:id="@+id/detailFragment"
         android:name="com.example.testandroid.ui.detail.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="movie"
+            app:argType="com.example.testandroid.data.entities.MovieEntity" />
+    </fragment>
 </navigation>
