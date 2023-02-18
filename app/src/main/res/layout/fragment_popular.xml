@@ -23,18 +23,11 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            android:id="@+id/popular_movies_refresh"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_movies"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_movies"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:listitem="@layout/item_movie" />
-
-        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_movie" />
 
     </LinearLayout>
 

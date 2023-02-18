@@ -1,11 +1,13 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    //hacer uso de plugin
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs'
 }
 
 android {
 
-    namespace 'com.example.testandroid' //NOMBRE DEL PAQUETE
     compileSdk 33 //LA VERSION DEL SDK QUE SE ESTA TRABAJANDO
 
     defaultConfig {
@@ -57,6 +59,12 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
 
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
+    // LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
     //RETROFIT
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
