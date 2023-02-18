@@ -1,5 +1,6 @@
 package com.example.testandroid.data.model
 
+import com.example.testandroid.data.entities.MovieEntity
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
