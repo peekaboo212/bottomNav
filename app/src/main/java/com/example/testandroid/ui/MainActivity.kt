@@ -30,5 +30,31 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         bottomNavigationView.setupWithNavController(navController)
+
+        bottomNavigationView.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.homeFragment -> {
+                    // Acción cuando se selecciona el elemento de inicio
+                    navController.navigate(R.id.homeFragment)
+                    true
+                }
+                R.id.upcomingFragment -> {
+                    // Acción cuando se selecciona el elemento del dashboard
+                    navController.navigate(R.id.upcomingFragment)
+                    true
+                }
+                R.id.topFragment -> {
+                    // Acción cuando se selecciona el elemento del dashboard
+                    navController.navigate(R.id.topFragment)
+                    true
+                }
+                else -> false
+            }
+        }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
